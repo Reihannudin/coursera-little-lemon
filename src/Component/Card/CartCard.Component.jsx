@@ -1,16 +1,23 @@
 import React from "react";
+import {useNavigate} from "react-router-dom";
 
 
 export const CartCardComponent = () => {
+
+    const navigate = useNavigate();
+    const goBack = () => {
+        navigate(-1);
+    }
+
     return(
         <>
-            <div style={{ background: "rgba(246,246,246,0.64)" , border : "1px solid #EAEAEA"}}>
-                <div className="flex justify-beetwen">
+            <div className="my-1" style={{ background: "rgba(255,255,255,0.64)" , borderBottom : "1px solid #EAEAEA"}}>
+                <div className="flex my-2 justify-beetwen">
                     <div className="flex">
                         <div  className="my-auto">
                             <input className="my-auto cursor-pointer mx-4" type="checkbox"/>
                         </div>
-                        <div className=" mx-auto my-auto " style={{ borderRadius:"12px 12px 12px 12px" , width:"100px" , height:"100px" , margin : "10px 0px"}}>
+                        <div className=" mx-auto my-auto " style={{ borderRadius:"12px 12px 12px 12px" , width:"85px" , height:"85px" , margin : "10px 0px"}}>
                             <img src="/assets/little-lemon-food (3).jpg" style={{ borderRadius:"12px 12px 12px 12px" }} className="w-full h-full" alt="" />
                         </div>
                         <div className="my-auto mx-3">
