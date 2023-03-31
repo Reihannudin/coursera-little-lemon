@@ -10,6 +10,7 @@ import Catalog from "./Pages/Catalog";
 import Cart from "./Pages/Cart";
 import Login from "./Pages/Login";
 import Register from "./Pages/Register";
+import StatusOrder from "./Pages/StatusOrder";
 
 function App() {
   return (
@@ -20,12 +21,14 @@ function App() {
       >
         <Routes>
           <Route path="/" element={<Home />}></Route>
+          <Route path="/catalog" element={<Catalog />}></Route>
           <Route path="/product" element={<Product />}></Route>
           <Route path="/profile" element={<Profile />}></Route>
           <Route path="/catalog" element={<Catalog />}></Route>
           <Route path="/cart" element={<Cart />}></Route>
           <Route path="/checkout/delivery" element={<CheckoutDelivery />}></Route>
           <Route path="/checkout/reservation" element={<CheckoutReservastion />}></Route>
+          <Route path="/status/order" element={<StatusOrder />}></Route>
           <Route path="/login" element={<Login />}></Route>
           <Route path="/register" element={<Register />}></Route>
         </Routes>

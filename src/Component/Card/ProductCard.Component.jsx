@@ -4,7 +4,7 @@ import {Link} from "react-router-dom";
 export const ProductCardComponent = () => {
     return(
         <>
-            <div className="card bg-white w-[190px] rounded-lg shadow-lg" style={{ minHeight: "250px" , maxHeight : "250px"}}>
+            <div className="card bg-white w-[170px] rounded-lg shadow-lg" style={{ minHeight: "250px" , maxHeight : "250px"}}>
                 <Link to={"/product/apakek"}>
                     <div className="top" >
                         <img
@@ -17,12 +17,12 @@ export const ProductCardComponent = () => {
                 </Link>
                 <div className="bottom flex flex-col justify-center items-start px-3 py-2 bg-">
                     <div className="title font-semibold  my-0">
-                        <h5 style={{ fontSize:"18px" , color: "#495E57"}}>
+                        <h5 style={{ fontSize:"17px" , color: "#495E57"}}>
                             Greek Salad
                         </h5>
                     </div>
                     <div className="category  text-left font-light ">
-                        <p className="font-medium" style={{ fontSize:"14px" , color: "#495E57"}}>
+                        <p className="font-medium" style={{ fontSize:"13px" , color: "#495E57"}}>
                             The famous greek salad of crispy lettuce
                         </p>
                     </div>
