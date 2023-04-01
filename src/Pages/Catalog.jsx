@@ -42,47 +42,47 @@ function Catalog (){
                     data-tabs-toggle="#myTabContent" role="tablist">
                     <li className="mr-2" role="presentation">
                         <button className="inline-block p-4  active:text-yellow-600 active:border-yellow-300  hover:text-yellow-600 hover:border-yellow-300 border-b-2 rounded-t-lg" id="profile-tab"
-                                data-tabs-target="#profile" type="button" role="tab" aria-controls="profile"
+                                data-tabs-target="#launch" type="button" role="tab" aria-controls="profile"
                                 aria-selected="false">Launch
                         </button>
                     </li>
                     <li className="mr-2" role="presentation">
                         <button
                             className="inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-yellow-600 hover:border-yellow-300 dark:hover:text-gray-300"
-                            id="dashboard-tab" data-tabs-target="#dashboard" type="button" role="tab"
+                            id="dashboard-tab" data-tabs-target="#mains" type="button" role="tab"
                             aria-controls="dashboard" aria-selected="false">Mains
                         </button>
                     </li>
                     <li className="mr-2" role="presentation">
                         <button
                             className="inline-block p-4 border-b-2 border-transparent rounded-t-lg  hover:text-yellow-600 hover:border-yellow-300 dark:hover:text-gray-300"
-                            id="settings-tab" data-tabs-target="#settings" type="button" role="tab"
+                            id="settings-tab" data-tabs-target="#dessert" type="button" role="tab"
                             aria-controls="settings" aria-selected="false">Dessert
                         </button>
                     </li>
                     <li role="presentation">
                         <button
                             className="inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-yellow-600 hover:border-yellow-300 dark:hover:text-gray-300"
-                            id="contacts-tab" data-tabs-target="#contacts" type="button" role="tab"
+                            id="contacts-tab" data-tabs-target="#alacarte" type="button" role="tab"
                             aria-controls="contacts" aria-selected="false">A La Carte
                         </button>
                     </li>
                 </ul>
             </div>
             <div id="myTabContent">
-                <div className="hidden px-4 bg-white" id="profile" role="tabpanel"
+                <div className="hidden px-4 bg-white" id="launch" role="tabpanel"
                      aria-labelledby="profile-tab">
                     <LaunchMenuComponent />
                         </div>
-                <div className="hidden px-4 bg-white" id="dashboard" role="tabpanel"
+                <div className="hidden px-4 bg-white" id="mains" role="tabpanel"
                      aria-labelledby="dashboard-tab">
                     <MainsMenuComponent />
                 </div>
-                <div className="hidden px-4 bg-white" id="settings" role="tabpanel"
+                <div className="hidden px-4 bg-white" id="dessert" role="tabpanel"
                      aria-labelledby="settings-tab">
                     <DessertMenuComponent />
                   </div>
-                <div className="hidden px-4 bg-white" id="contacts" role="tabpanel"
+                <div className="hidden px-4 bg-white" id="alacarte" role="tabpanel"
                      aria-labelledby="contacts-tab">
                     <AlaCarteMenuComponent />
                 </div>

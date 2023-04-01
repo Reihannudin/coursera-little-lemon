@@ -13,6 +13,75 @@ export const  SpecialComponent = () => {
         document.getElementById("contentFlashSale").scrollLeft += 400;
     }
 
+    const category = [
+        {
+            id : 1,
+            name : "Lunch" ,
+            url : ""
+        } ,
+        {
+            id : 2,
+            name : "Mains" ,
+            url : ""
+        } ,
+        {
+            id : 3,
+            name : "Desserts" ,
+            url : ""
+        } ,
+        {
+            id : 4,
+            name : "A'La'Carte" ,
+            url : ""
+        } ,
+        {
+            id : 5,
+            name : "Specials" ,
+            url : ""
+        } ,
+
+
+    ]
+
+    const product = [
+            {
+                id : 1,
+                name : "Greek Salad",
+                description : "The famous greek salad of crispy lettuce, peppers, olives and our Chicago..",
+                price : 12.99,
+                image : "/assets/little-lemon-food (2).jpg" ,
+            },
+        {
+            id : 2,
+            name : "Brushetta",
+            description : "Our Bruschetta is made from grilled bread that has been smeared with garlic ",
+            price : 7.99,
+            image : "/assets/little-lemon-food (1).png" ,
+        },
+        {
+            id : 3,
+            name : "Grilled Fish",
+            // description : "",
+            description : "The famous greek salad of crispy lettuce, peppers, olives and our Chicago..",
+            price : 20.00,
+            image : "/assets/little-lemon-food (1).jpg" ,
+        },
+        {
+            id : 4,
+            name : "Pasta",
+            description : "The famous greek salad of crispy lettuce, peppers, olives and our Chicago..",
+            price : 18.99,
+            image : "/assets/little-lemon-food (1).webp" ,
+        },
+        {
+            id : 5,
+            name : "Lemon Dessert",
+            description : "The famous greek salad of crispy lettuce, peppers, olives and our Chicago..",
+            price : 6.99,
+            image : "/assets/little-lemon-food (3).jpg" ,
+        },
+    ]
+
     return(
         <>
             <div className="mx-auto font-karla" style={{ width: "90%" }}>
@@ -27,31 +96,20 @@ export const  SpecialComponent = () => {
                         </button>
                     </div>
                     <div id="contentFlashSale" className="carousel  py-2 gap-2 flex items-center justify-start overflow-x-auto scroll-smooth  scrollbar-hide">
-                        <div>
-                            <CategoryMenuComponent />
-                        </div>
-                        <div>
-                            <CategoryMenuComponent />
-                        </div>
-                        <div>
-                            <CategoryMenuComponent />
-                        </div>
-                        <div>
-                            <CategoryMenuComponent />
-                        </div>
-                        <div>
-                            <CategoryMenuComponent />
-                        </div>
-                        <div>
-                            <CategoryMenuComponent />
-                        </div>
+                        {category.map((item) => {
+                            return(
+                                <div className="w-full">
+                                    <CategoryMenuComponent key={item.id} name={item.name} />
+                                </div>
+                            )
+                        })}
                     </div>
                     <div className="my-7">
-                        <SpecialCardComponent />
-                        <SpecialCardComponent />
-                        <SpecialCardComponent />
-                        <SpecialCardComponent />
-                        <SpecialCardComponent />
+                        {product.map((item) =>{
+                            return(
+                                <SpecialCardComponent key={item.id} name={item.name} price={item.price} description={item.description} image={item.image}/>
+                            )
+                        })}
                     </div>
                 </div>
             </div>

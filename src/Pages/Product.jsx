@@ -14,7 +14,6 @@ function Product(){
     };
 
 
-
     return(
         <>
             <div className="bg-white pb-10">
@@ -99,12 +98,12 @@ function Product(){
                         maxWidth: "400px",
                     }}
                 >
-                    <Link to="" className="w-full">
+                    <Link to="/cart" className="w-full">
                         <button className="bg-yellow w-full text-white rounded-lg py-2 text-center w-full">
                             Add Cart
                         </button>
                     </Link>
-                    <Link to="" className="w-full">
+                    <Link to="/" className="w-full">
                         <button className="w-full bg-red-700 text-white border-red-700 rounded-lg py-2 text-center w-full">
                             Order Now
                         </button>

@@ -11,6 +11,46 @@ export const OtherProductComponent = () => {
         document.getElementById("contentRecommended").scrollLeft += 400;
     }
 
+    const product= [
+        {
+            id : 1,
+            name : "Greek Salad",
+            description : "The famous greek salad of crispy lettuce",
+            price : 12.99,
+            image : "/assets/little-lemon-food (2).jpg" ,
+        },
+        {
+            id : 2,
+            name : "Brushetta",
+            description : "The famous greek salad of crispy lettuce",
+            price : 7.99,
+            image : "/assets/little-lemon-food (1).png" ,
+        },
+        {
+            id : 3,
+            name : "Grilled Fish",
+            // description : "",
+            description : "The famous greek salad of crispy lettuce",
+            price : 20.00,
+            image : "/assets/little-lemon-food (1).jpg" ,
+        },
+        {
+            id : 4,
+            name : "Pasta",
+            description : "The famous greek salad of crispy lettuce",
+            price : 18.99,
+            image : "/assets/little-lemon-food (1).webp" ,
+        },
+        {
+            id : 5,
+            name : "Lemon Dessert",
+            description : "The famous greek salad of crispy lettuce",
+            price : 6.99,
+            image : "/assets/little-lemon-food (3).jpg" ,
+        },
+    ]
+
+
     return (
         <>
             <div className="relative pb-6  bg-white">
@@ -24,24 +64,13 @@ export const OtherProductComponent = () => {
                     </button>
                 </div>
                 <div id="contentRecommended" className="carousel py-0 gap-3 flex items-center justify-start overflow-x-auto scroll-smooth  scrollbar-hide">
-                    <div>
-                        <ProductCardComponent />
-                    </div>
-                    <div>
-                        <ProductCardComponent />
-                    </div>
-                    <div>
-                        <ProductCardComponent />
-                    </div>
-                    <div>
-                        <ProductCardComponent />
-                    </div>
-                    <div>
-                        <ProductCardComponent />
-                    </div>
-                    <div>
-                        <ProductCardComponent />
-                    </div>
+                    {product.map((item) => {
+                        return (
+                            <div>
+                                <ProductCardComponent key={item.id} name={item.name} description={item.description} image={item.image} price={item.price}/>
+                            </div>
+                        )
+                    })}
                 </div>
             </div>
         </>
